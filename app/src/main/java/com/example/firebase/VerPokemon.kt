@@ -97,7 +97,7 @@ class VerPokemon : AppCompatActivity() {
             }
             true
         }
-        // goala
+
         if (itemSpinner != null) {
             itemSpinner.setOnMenuItemClickListener {
                 itemSearch.collapseActionView()
