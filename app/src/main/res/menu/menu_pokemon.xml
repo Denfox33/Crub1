@@ -13,7 +13,7 @@
 
         <item
             android:id="@+id/filtrado"
-            android:icon="@drawable/baseline_arrow_drop_down_circle_24"
+            android:icon="@drawable/baseline_tune_24"
             app:actionViewClass="android.widget.Spinner"
             app:showAsAction="ifRoom|collapseActionView"
             android:title="Filtrado" />
