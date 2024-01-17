@@ -89,7 +89,7 @@ class PokeAdaptador(private val lista_club: MutableList<Pokemon>):
             "Nombre Descendente" -> lista_filtrada.sortByDescending { it.nombre }
             "Nivel Ascendente" -> lista_filtrada.sortBy { it.poder }
             "Nivel Descendente" -> lista_filtrada.sortByDescending { it.poder }
-            // Agrega otros casos según tus necesidades
+
         }
         notifyDataSetChanged()
     }

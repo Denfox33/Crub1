@@ -28,7 +28,7 @@ class VerPokemon : AppCompatActivity() {
     private lateinit var adaptador: PokeAdaptador
     private lateinit var db_ref: DatabaseReference
 
-    private lateinit var orderSpinner: Spinner
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,16 +91,19 @@ class VerPokemon : AppCompatActivity() {
             }
         })
 
-        itemSearch.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
-            override fun onMenuItemActionExpand(p0: MenuItem?): Boolean {
-                return true
+        itemSearch.setOnMenuItemClickListener {
+            if (itemSpinner != null) {
+                itemSpinner.collapseActionView()
             }
+            true
+        }
 
-            override fun onMenuItemActionCollapse(p0: MenuItem?): Boolean {
-                adaptador.filter.filter("")
-                return true
+        if (itemSpinner != null) {
+            itemSpinner.setOnMenuItemClickListener {
+                itemSearch.collapseActionView()
+                true
             }
-        })
+        }
 
         // Configurar el Spinner
         val orderSpinner = itemSpinner?.actionView as Spinner
